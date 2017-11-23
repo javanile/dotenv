@@ -66,6 +66,8 @@ class Environment extends Dotenv
         }
 
         switch (strtolower($value)) {
+            case '(default)':
+                return $this->value($default);
             case 'true':
             case '(true)':
                 return true;
