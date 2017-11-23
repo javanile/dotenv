@@ -13,7 +13,9 @@
 
 namespace Javanile\Dotenv;
 
-class Dotenv extends
+use Dotenv\Dotenv;
+
+class Environment extends Dotenv
 {
     /**
      * Gets the value of an environment variable.
