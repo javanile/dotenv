@@ -18,6 +18,39 @@ use Dotenv\Dotenv;
 class Environment extends Dotenv
 {
     /**
+     * The file path.
+     *
+     * @var string
+     */
+    protected $fileExists;
+
+    /**
+     * Create a new dotenv instance.
+     *
+     * @param string $path
+     * @param string $file
+     *
+     * @return void
+     */
+    public function __construct($path, $file = '.env')
+    {
+        parent::__construct($path, $file);
+        $this->fileExists = file_exists($this->getFilePath($path, $file));
+    }
+
+    /**
+     * Load silentily environment file in given directory.
+     *
+     * @return array
+     */
+    public function safeLoad()
+    {
+        if ($this->fileExists) {
+            return $this->load();
+        }
+    }
+
+    /**
      * Gets the value of an environment variable.
      *
      * @param  string  $key
