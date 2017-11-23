@@ -1,6 +1,6 @@
 {
     "name": "javanile/dotenv",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "repositories": [
         {
             "type": "git",
@@ -10,5 +10,15 @@
     "require": {
         "php": "^5.3.6 || >=7.0 <7.2",
         "vlucas/phpdotenv": "^2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Javanile\\Dotenv\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Javanile\\Dotenv\\Tests\\": "tests"
+        }
     }
 }
