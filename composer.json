@@ -1,0 +1,14 @@
+{
+    "name": "javanile/dotenv",
+    "version": "0.0.1",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/javanile/dotenv"
+        }
+    ],
+    "require": {
+        "php": "^5.3.6 || >=7.0 <7.2",
+        "vlucas/phpdotenv": "^2.4"
+    },
+}
